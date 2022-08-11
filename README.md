@@ -1,6 +1,6 @@
 # webgallery
 
-a simple webgallery made with node.js
+a simple webgallery made with node.js and nedb
 
 ## Project setup
 ```
