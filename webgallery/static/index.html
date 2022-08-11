@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>WebGallery</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css"/>
+    <link href="style/image.css" rel="stylesheet" type="text/css"/>
+    <link href="style/form.css" rel="stylesheet" type="text/css"/>
+    <link href="style/comment.css" rel="stylesheet" type="text/css"/>
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <header>
+        <a href="/" id="title">WebGallery</a>
+        <a href="/login.html" id="signin_button" class="btn header_btn">Sign in or Sign up</a>
+        <a href="/signout/" id="signout_button" class="btn header_btn">Sign out</a>
+    </header>
+
+    <form class="complex_form" id="create_image_form" action='/api/image/' method="POST" enctype="multipart/form-data">
+      <div class="form_title">
+        Post a image
+      </div>
+      <input type="text" id="image_name" class="form_element" placeholder="Enter image name" name="image_name" required/>
+      <input type="file" id="picture" name="picture" class="form_element" required/>
+      <button type="submit" class="btn">Post your image</button>
+    </form>
+    
+    <div id="images">
+        no pic now
+    </div>
+
+    <div id="buttons">
+        <button id="prev">← prev
+        </button>
+
+        <button id="delete">delete
+        </button>
+
+        <button id="next">next →
+        </button>
+    </div>
+
+   <form class="complex_form" id="create_comment_form">
+        <div class="form_title">Write a comment</div>
+        <input type="text" id="comment_content" class="form_element" name="comment_content" placeholder="say something" required/>
+        <button type="submit" class="btn">Post your comment</button>
+    </form>
+
+    <div id="comments" hidden>
+    </div>
+    
+    <footer>
+        <a href='/credits.html'>credits</a>
+    </footer>
+</body>
+</html>
